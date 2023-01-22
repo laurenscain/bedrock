@@ -6,8 +6,6 @@ Bedrock Learning Application
 
 In the root dir, npm install
 
-npm run json:server to start json api
-
 npm run start
 
 ## Ideas for Improvement

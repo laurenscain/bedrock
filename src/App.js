@@ -21,7 +21,7 @@ export default function App() {
 
   const fetchData = (page) => {
     setLoading(true);
-console.log("fetching",`http://localhost:3004/recipes?_page=${page}&_limit=${perPage}`)
+
     fetch(`http://localhost:3004/recipes?_page=${page}&_limit=${perPage}`)
     .then(res => res.json())
     .then(
