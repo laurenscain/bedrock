@@ -6,13 +6,13 @@
 }
 .modalDiv {
   width: 100vw;
+  max-width: 1000px;
   height: 100vh;
   position: fixed;
   top: 0;
   background-color: rgba(91, 112, 131, 0.4);
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 .modal {
   width: 50vw;

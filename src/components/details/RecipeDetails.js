@@ -8,7 +8,7 @@ const RecipeDetails = ({recipe, categories}) => {
   
   return (
     <div>
-      <RecipeImage recipe={recipe} w={600} h={300} radius={'none'} modal={true} />
+      <RecipeImage recipe={recipe} w={700} h={300} radius={'none'} modal={true} />
       
       <div className="flex flex-row bg-gray-700 p-2 h-24 md:h-20">
         
