@@ -1,12 +1,4 @@
 {
-  "categories": [
-    {"id": 0, "categoryName": "Appetizers"},
-    {"id": 1, "categoryName": "Snacks"},
-    {"id": 2, "categoryName": "Breads"},
-    {"id": 3, "categoryName": "Brunch"},
-    {"id": 4, "categoryName": "Cakes"},
-    {"id": 5, "categoryName": "Cereal"}
-  ],
   "recipes": [
     {
         "id": 1,
