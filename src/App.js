@@ -21,11 +21,12 @@ export default function App() {
 
   const fetchData = (page) => {
     setLoading(true);
-
+console.log("fetching",`http://localhost:3004/recipes?_page=${page}&_limit=${perPage}`)
     fetch(`http://localhost:3004/recipes?_page=${page}&_limit=${perPage}`)
     .then(res => res.json())
     .then(
       (result) => {
+        console.log('fetched',result)
         setItems([...items, ...result]);
         if(result.length < perPage) {
           hasMore.current = false;
@@ -33,6 +34,7 @@ export default function App() {
         setLoading(false);
       },
       (error) => {
+        console.log('error',error)
         setError(error);
         hasMore.current = false;
       }

@@ -9,6 +9,18 @@ In the root dir, npm install
 npm run json:server to start json api
 
 npm run start
+
+## Ideas for Improvement
+
+- Allow user creation and login
+- Header, footer
+- Save as a favorite
+- Browse favorite collection
+- Edit/delete favorites
+- Share
+- Social media integration
+
+
 ## Requirements
 
 We'd like you to build an infinite scrolling component that allows users to scroll through a list of recipes as styled recipe cards (you can use the recipes from your other example if you like). We do not need to see the full text of the recipe; this is just a catalog showing the title, categories, and author of the recipe.
