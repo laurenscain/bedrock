@@ -7,7 +7,7 @@ const RecipeDetails = ({recipe, categories}) => {
   const renderHTML = (rawHTML) => React.createElement("div", { dangerouslySetInnerHTML: { __html: rawHTML } });
   
   return (
-    <div className="image-wrapper">
+    <div>
       <RecipeImage recipe={recipe} w={600} h={300} radius={'none'} modal={true} />
       
       <div className="flex flex-row bg-gray-700 p-2 h-24 md:h-20">

@@ -42,7 +42,7 @@ const ModalCard = ({total, location}) => {
     <div className="modalDiv">
       <div className="modal">
         <div className="flex flex-row">
-          <h2 className="p-2 font-bold text-2xl flex-grow">{recipe && recipe.title}</h2>
+          <h2 className="p-2 font-bold text-2xl flex-grow">Check out this Recipe!</h2>
           <div className="py-3 px-2 hover:cursor-pointer font-bold justify-end" onClick={() => navigate('/')}>X</div>
         </div>
         
