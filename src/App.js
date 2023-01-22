@@ -11,7 +11,7 @@ export default function App() {
   const perPage = 21;
   const [items, setItems] = useState([]);
   const [loading, setLoading]  = useState(false);
-  const [error, setError] = useState(null);
+  const [errorMsg, setErrorMsg] = useState(null);
   const hasMore = useRef(true);
   const page = useRef(1);
 
@@ -35,7 +35,7 @@ console.log("fetching",`http://localhost:3004/recipes?_page=${page}&_limit=${per
       },
       (error) => {
         console.log('error',error)
-        setError(error);
+        setErrorMsg('There has been an error loading data');
         hasMore.current = false;
       }
     )
@@ -63,7 +63,7 @@ console.log("fetching",`http://localhost:3004/recipes?_page=${page}&_limit=${per
   return (
     <div className="App">
          <Routes location={background || location}>
-          <Route exact path="/" element={<RecipeGrid items={items} loading={loading} />}>
+          <Route exact path="/" element={<RecipeGrid items={items} loading={loading} error={errorMsg} />}>
             <Route path="/:id" element={<ModalCard total={items.length} location={location} />} />
           </Route>
         </Routes>
