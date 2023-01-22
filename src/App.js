@@ -1,8 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './App.css';
 import RecipeGrid from './components/grid/RecipeGrid';
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import RecipeCard from './components/card/RecipeCard';
+import { Routes, Route, useLocation } from "react-router-dom";
 import ModalCard from './components/card/ModalCard';
 
 export default function App() {

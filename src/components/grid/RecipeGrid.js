@@ -8,9 +8,12 @@ const RecipeGrid = ({items, loading}) => {
     <div className="flex flex-col">
       <div className="flex flex-row flex-wrap justify-center">
         {items && items.map(r => 
-          <RecipeCard key={r.id} recipe={r} categories={lookupCategories(r.categories)}>{r.title}</RecipeCard>)
+          <RecipeCard key={r.id} recipe={r} categories={lookupCategories(r.categories)}>
+            {r.title}
+          </RecipeCard>)
         }
       </div>
+      
       {loading && 
         <div className="flex justify-center">
           <span className="rounded border border-black-600 p-2">Loading More...</span>
