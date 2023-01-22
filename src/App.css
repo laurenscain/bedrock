@@ -9,7 +9,7 @@
   max-width: 1000px;
   height: 100vh;
   position: fixed;
-  top: 0;
+  padding-bottom: 100px;
   background-color: rgba(91, 112, 131, 0.4);
   display: flex;
   justify-content: center;
@@ -17,6 +17,7 @@
 .modal {
   width: 50vw;
   height: 700px;
+  margin: auto;
   background-color: white;
   border-radius: 5px;
 }
