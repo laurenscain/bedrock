@@ -1,4 +1,4 @@
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import RecipeDetails from "../details/RecipeDetails";
 import { useEffect, useState } from "react";
 import { lookupCategories } from '../../utils/CategoryUtil';
@@ -12,6 +12,13 @@ const ModalCard = ({total, location}) => {
   const [recipe, setRecipe] = useState(null);
   useEscapeKey(() => navigate('/'));
 
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+        document.body.style.overflow = 'unset';
+    }
+  }, [])
 
   useEffect(() => {
 
@@ -38,9 +45,10 @@ const ModalCard = ({total, location}) => {
           <h2 className="p-2 font-bold text-2xl flex-grow">{recipe && recipe.title}</h2>
           <div className="py-3 px-2 hover:cursor-pointer font-bold justify-end" onClick={() => navigate('/')}>X</div>
         </div>
+        
         {recipe && <RecipeDetails recipe={recipe} categories={lookupCategories(recipe.categories)} />}
       
-      <Navigation id={recipe.id} location={location} total={total} />
+        <Navigation id={recipe.id} location={location} total={total} />
       </div>
     </div>
   );

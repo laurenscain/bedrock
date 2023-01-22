@@ -13,7 +13,7 @@ const RecipeDetails = ({recipe, categories}) => {
     <div className="image-wrapper">
       <RecipeImage recipe={recipe} w={700} h={400} radius={'none'} modal={true} />
       
-      <div className="flex flex-row bg-gray-700 p-2">
+      <div className="flex flex-row bg-gray-700 p-2 h-20">
         
         <DisplayInfo recipe={recipe} />
 
@@ -21,7 +21,7 @@ const RecipeDetails = ({recipe, categories}) => {
 
       </div>
 
-      <div className="px-4 py-2 h-32 overflow-y-scroll">
+      <div className="px-4 py-4 h-40 overflow-y-scroll">
         {renderHTML(recipe.directions)}
       </div>
 </div>
