@@ -9,7 +9,7 @@ export default function App() {
   const location = useLocation();
   const background = location.state && location.state.background;
 
-  const perPage = 12;
+  const perPage = 21;
   const [items, setItems] = useState([]);
   const [loading, setLoading]  = useState(false);
   const [error, setError] = useState(null);
