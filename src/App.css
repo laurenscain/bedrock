@@ -1,4 +1,9 @@
-
+.App {
+  width: 100vw;
+  max-width: 1000px;
+  display: flex;
+  margin: auto;
+}
 .modalDiv {
   width: 100vw;
   height: 100vh;
@@ -14,4 +19,22 @@
   height: 700px;
   background-color: white;
   border-radius: 5px;
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .modal {
+      width: 80vw;
+      height: 80vh;
+    }
+}
+/* landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+   
 }

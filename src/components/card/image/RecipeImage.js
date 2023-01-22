@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const RecipeImage = ({recipe, w=400, h=300, radius='md', modal=false}) => {
+const RecipeImage = ({recipe, w=300, h=200, radius='md', modal=false}) => {
   
     const [img, setImg] = useState(null);
 
