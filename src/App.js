@@ -26,7 +26,6 @@ export default function App() {
     .then(res => res.json())
     .then(
       (result) => {
-        console.log('fetched',result)
         setItems([...items, ...result]);
         if(result.length < perPage) {
           hasMore.current = false;
@@ -34,7 +33,6 @@ export default function App() {
         setLoading(false);
       },
       (error) => {
-        console.log('error',error)
         setErrorMsg('There has been an error loading data');
         hasMore.current = false;
       }
@@ -64,12 +62,12 @@ export default function App() {
     <div className="App">
          <Routes location={background || location}>
           <Route exact path="/" element={<RecipeGrid items={items} loading={loading} error={errorMsg} />}>
-            <Route path="/:id" element={<ModalCard total={items.length} location={location} />} />
+            <Route path="/:id" element={<ModalCard total={items.length} background={background} location={location} />} />
           </Route>
         </Routes>
-        {background && (
+        {!background && (
           <Routes>
-            <Route path="/:id" element={<ModalCard total={items.length} location={location} />} />
+            <Route path="/:id" element={<ModalCard total={items.length} background={background} location={location} />} />
           </Routes>
         )}
         </div>
