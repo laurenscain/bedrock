@@ -60,16 +60,17 @@ export default function App() {
 
   return (
     <div className="App">
-         <Routes location={background || location}>
-          <Route exact path="/" element={<RecipeGrid items={items} loading={loading} error={errorMsg} />}>
-            <Route path="/:id" element={<ModalCard total={items.length} background={background} location={location} />} />
-          </Route>
-        </Routes>
-        {!background && (
-          <Routes>
-            <Route path="/:id" element={<ModalCard total={items.length} background={background} location={location} />} />
-          </Routes>
-        )}
-        </div>
+    
+      <Routes location={background || location}>
+        <Route exact path="/" element={<RecipeGrid items={items} loading={loading} error={errorMsg} />}>
+          <Route path="/:id" element={<ModalCard total={items.length} background={background} location={location} />} />
+        </Route>
+      </Routes>
+      
+      <Routes>
+        <Route path="/:id" element={<ModalCard total={items.length} background={background} location={location} />} />
+      </Routes>
+      
+    </div>
   )
 }
